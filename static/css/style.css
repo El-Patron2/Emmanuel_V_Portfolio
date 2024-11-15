@@ -433,35 +433,76 @@ h1, h2, h3 {
 
 #certifications {
     padding: 2rem;
-    text-align: center; /* Center text */
+    text-align: center;
 }
 
 .certifications-container {
     background: transparent;
-    border-radius: 20px; /* Curvy corners */
+    border-radius: 20px;
     padding: 2rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
-    max-width: 800px; /* Limit width for better aesthetics */
-    margin: 0 auto; /* Center the container */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 .certifications-list {
-    list-style: none; /* Remove default bullets */
-    padding: 0; /* Remove padding */
-    margin: 0; /* Remove margin */
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .certifications-list li {
-    display: flex; /* Use flexbox for alignment */
-    align-items: center; /* Center items vertically */
-    padding: 10px 0; /* Space between items */
-    font-size: 1.1rem; /* Adjust font size */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+    font-size: 1.1rem;
+    border-bottom: 1px solid #eee;
+}
+
+.certifications-list li:last-child {
+    border-bottom: none;
 }
 
 .certifications-list li i {
-    color: #007bff; /* Icon color */
-    margin-right: 10px; /* Space between icon and text */
-    font-size: 1.5rem; /* Adjust icon size */
+    color: #007bff;
+    margin-right: 10px;
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.certifications-list li span {
+    flex-grow: 1;
+    text-align: left;
+    margin-right: 10px;
+}
+
+.view-btn {
+    background-color: #007bff;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.view-btn:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .certifications-list li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .certifications-list li span {
+        margin-bottom: 10px;
+    }
+
+    .view-btn {
+        align-self: flex-end;
+    }
 }
 
 /* Contact Section */
